@@ -22,7 +22,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ${{github.workspace}}/WebApplication1/WebApplication1/WebApplication1.csproj
     - name: Build
-      run: dotnet build ${{github.workspace}}/WebApplication1/WebApplication1/WebApplication1.csproj--no-restore
+      run: dotnet build ${{github.workspace}}/WebApplication1/WebApplication1/WebApplication1.csproj --configuarion release --no-restore
     - name: Test
       run: dotnet test ${{github.workspace}}/WebApplication1/WebApplication1/WebApplication1.csproj--no-build --verbosity normal
     - name : publish
